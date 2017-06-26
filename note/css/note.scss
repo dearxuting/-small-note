@@ -1,0 +1,13 @@
+@charset "utf-8" ;
+$s:50;
+body,html{width:100%;height:100%;overflow: hidden  ;box-sizing: border-box;}
+*{margin: 0;padding:0 ;}
+ul,li{list-style:none ;}
+a{text-decoration:none ;}
+body, html { width: 100%; height: 100%; margin: 0; }
+ul, li { list-style: none; }
+#one { width: 750/$s+rem; height: 100%; position: relative; overflow: hidden; }
+#one ul { transition: transform 1s; position: absolute; top: 0; left: 0; margin: 0; padding: 0; list-style: none; width: 200%; height: 100%; }
+#one ul li { width: 750/$s+rem;float: left; height: 100%; }
+#one ul li img {width: 750/$s+rem; height: 100%; }
+#list button { z-index: 99; position: absolute; border-radius: 50%; right: 72px; top: 170px; background: #000; opacity: 0.5; border: none; width: 50px; height: 50px; color: white; font-size: 16px; font-family: "微软雅黑"; }

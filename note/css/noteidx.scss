@@ -1,0 +1,99 @@
+@charset "utf-8";
+$s:50;
+body, html { width: 100%; height: 100%; overflow: hidden; box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+ul, li { list-style: none; }
+a { text-decoration: none; }
+.container{width:100% ;
+height:100% ;
+overflow: hidden;
+display: flex;
+flex-direction: column;}
+
+header{width:100%;
+height:89/$s+rem;
+background:#f1c447;
+text-align: center;
+display: -webkit-flex;}
+
+header >span{width: 89px;
+height:89/$s+rem;
+display: block;
+font-size:20px;
+margin-top: 24px;
+color:#fff ;}
+header p{flex: 1;text-align: center;
+margin-top: 25px;}
+
+.glyphicon {top:6px;}
+
+input{border-radius:10px;
+border: 0;
+width: 100%;
+height:35/$s+rem;
+line-height:35px;
+text-indent:15px;}
+
+header p span{margin-left:-35px;
+line-height:25px; 
+font-size: 15px;
+color:#ececec ;}
+
+section{width:300%;
+height:100%;
+overflow: hidden;}
+h3{font-size:18px;
+color:#323232;
+ margin: 10px;
+ margin-left: 30px;
+ font-family: '黑体';
+ font-weight: bold;}
+ 
+h3 span{font-size:14px;
+ color:#d3d3d2 ;
+ margin-left: 10px;
+ font-family: '黑体';}
+section ul{width:300%;}
+section ul li{width:100%;}
+ footer{width: 100%;
+ height:65/$s+rem;
+ background:#f1c447;
+}
+ 
+footer ul{width: 100%;
+display:flex ;
+height: 100%;
+margin-top:15px ;}
+.addcolor{
+    color:#323232;
+}
+#Time{font-size:14px;
+ color:#666;
+ margin-left: 30px;
+ font-family: '黑体';}
+#add{position: relative;}
+#uls{
+    display: none;
+    position: absolute;
+    top:80px;
+    right:20px;
+    width: 160px;
+    height:auto;
+    line-height:50px;
+    background:#fff;
+border-radius:10px; box-shadow:0px 5px 10px #ececec;border: 1px solid #D3D3D2;}
+#uls li{color: #656868;text-align: center;border-bottom:1px dashed #D3D3D2;}
+#uls li:nth-child(3){border:0 ;}
+#uls li h4{font-size: 14px;color:#323232 ;margin-left: -20px;margin-top: 5px;;}
+#uls li span{float: right;margin-top:-37px ;margin-right:15px; ;}
+footer ul li{flex:1 ;
+display: flex;
+flex-direction: column;
+text-align: center;
+line-height:40px;
+}
+footer ul li  span img{width:62/$s+rem;height:57/$s+rem ;}
+footer ul li span{color: #FFFFFF;}
+
+b{font-size: 10px;color: #323232;}
+.color{color: #f9f4e9;}

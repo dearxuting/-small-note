@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>启动页</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<script src="js/zepto.min.js"></script>
+		<script src="js/jquery-3.2.1.js"></script>
+	</head>
+	   <script>
+	   	   document.documentElement.style.fontSize=innerWidth/15+"px";
+	   </script>
+	    <link rel="stylesheet" href="css/indexnote.css" />
+	<body>
+		<div id="one">
+			<ul id="list">
+				<li><img src="img/note-Splash screen.jpg"></li>
+				<li><img src="img/note-Splash screen2.jpg"><button>跳过</button></li>
+			</ul>
+		</div>
+		<script>
+			$("#one")[0].addEventListener("touchstart",function(ev){
+				ev.preventDefault();
+			})
+			$(function(){
+				var n=0;
+				var size=$("#list").find("li").length;
+				var w=$(window).width();
+					$("#one").on("swipeLeft",function(){
+						n++;
+						if(n>=size){
+							n=size-1;
+						}
+						$("#list").css("-webkit-transform","translate3d("+(-n*w)+"px,0,0)");
+					})
+					
+						$("#one").on("swipeRight",function(){
+				               n--;
+				              if(n<=0){
+					             n=0;}
+				$("#list").css("-webkit-transform","translate3d("+(-n*w)+"px,0,0)");
+			})
+						$("button").on("tap",function(){
+							location.href="index.html";
+						})
+			 
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,40 @@
+@charset "UTF-8";
+* { margin: 0; padding: 0; }
+
+body, html { box-sizing: border-box; width: 100%; height: 100%; }
+
+ul, li { list-style: none; }
+
+.container { width: 100%; height: 100%; overflow: hidden; display: flex; flex-direction: column; }
+
+header { width: 100%; line-height: 1.78rem; height: 1.78rem; background: #f1c447; text-align: center; display: -webkit-flex; }
+
+header h2 { text-align: center; width: 100%; color: #fff; font-size: 16px; }
+
+section { width: 100%; height: 100%; }
+
+section form { width: 100%; margin: 80px auto; }
+
+section form p { line-height: 60px; font-size: 14px; height: 60px; width: 100%; display: flex; justify-content: center; align-items: center; }
+
+p label { margin-right: 10px; color: #c89403; font-family: "微软雅黑"; }
+
+input { width: 50%; height: 30px; outline: none; }
+
+.btn { background: #f1c447; color: #fff; border-radius: 5px; border: 0; width: 30%; height: 40px; margin-top: 60px; }
+
+textarea { resize: none; outline: none; text-indent: 1em; width: 50%; height: 30px; }
+
+footer { width: 100%; height: 2rem; background: #f1c447; padding-bottom: 25px; }
+
+footer ul { width: 100%; display: flex; margin-top: 10px; }
+
+footer ul li { flex: 1; display: flex; flex-direction: column; text-align: center; }
+
+footer ul li span img { width: 1.44rem; height: 1.4rem; }
+
+b { font-size: 10px; color: #323232; }
+
+.color { color: #f9f4e9; }
+
+/*# sourceMappingURL=new.css.map */

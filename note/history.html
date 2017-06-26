@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<title>历史标签</title>
+	  	<link rel="stylesheet" href="bs/css/bootstrap.css" />
+	    <link rel="stylesheet" href="css/note.css" />
+	     <script type="text/javascript" src="js/jquery-3.2.1.js" ></script>
+	     <script src="js/slide.js"></script>
+	     <script src="js/lick.js"></script>
+	  <!--   <script src="js/index.js"></script>-->
+	<body>
+		<div class="container">
+		 <header>
+		 	<span class="glyphicon glyphicon-align-justify" id="show"></span>
+		 	<div id="person">
+		 		<p><span><img src="img/person.jpg"></span><span class="ld">琳达</span></p>
+		 		<ul>
+		 			<li><img src="img/list-1.png"/><span class="title">同步微云</span><span class="t2">></span></li>
+		 			<li><img src="img/list2.png"/><span class="title">检查更新</span><span class="t2">></span></li>
+		 		    <li><img src="img/list3.png"/><span class="title">界面语言</span><span class="t2">></span></li>
+		 		    <li><img src="img/list4.png"/><span class="title">问题反馈</span><span class="t2">></span></li>
+		 		    <li><img src="img/list5.png"/><span class="title">应用加密</span><span class="t2">></span></span></li>
+		 		    <li><img src="img/list6.png"/><span class="title">更多应用</span><span class="t2">></span></li>
+		 		    <li><img src="img/list7.png"/><span class="title">颜色设置</span><span class="t2">></span></li>
+		 		     <li><img src="img/list8.png"/><span class="title">note服务</span><span class="t2">></span></li>
+		 		    <li><img src="img/list9.png"/><span class="title">分享好友</span><span class="t2">></span></li>
+		 		     <li><img src="img/list10.png"/><span class="title">便签分享</span><span class="t2">></span></li>
+		 		</ul>
+		 	</div>
+			<p><input type="text"  class="inps" id="inps"/><span class="glyphicon glyphicon-search" id="search" class="sech" onclick=""></span></p>
+			<span class="glyphicon glyphicon-plus" id="add"></span>
+             <ul id="uls">
+             	<li><h4>面对面快传</h4><span class="glyphicon glyphicon-share"></span></li>
+             	<li><h4>给点建议</h4><span class="glyphicon glyphicon-comment"></span></li>
+             	<li><h4>关注我们</h4><span class="glyphicon glyphicon-user"></span></li>
+             </ul>
+		 </header>
+		 <section>
+		    <p><h3>历史标签:<span>(History matters)</span></h3></p>
+		 	 <div class="slist">
+		 	 	   
+		 	 </div>
+		 	 
+		 </section>
+		 <footer>
+		 	 <ul class="footlist">
+		 	 	<li><span><a href="index.html"><img src="note/img/note1.png"></a></span><b>今天</b></li>
+		 	 	<li><span><a href="newcreate.html"><img src="img/create2.png"></a></span><b>发布</b></li>
+		 	 	<li class="color"><span><a href="history.html"><img src="note/img/jl3.png"></a></span><b>历史</b></li>
+		 	 </ul>
+		 </footer>
+		</div>
+		<script>
+			$(function(){
+	     	   	
+	     	   	 var obj=JSON.parse(localStorage.getItem("f"));
+	           var s="";
+	     	    for(var i=0;i<obj.length;i++){
+	     	    	if(s){
+	     	    		  s+="<li>"+obj[i].time+"<span>"+obj[i].txt+"</span>"+"</li>";
+	     	    	}
+	     	    	else{s="<li>"+obj[i].time+"<span>"+obj[i].txt+"</span>"+"</li>";}
+	     	    }
+	     	    var html=$(".slist").html();
+	     	    html=html+s;
+	     	    $(".slist").html(html);
+	     	    $(".slist li").on("tap",function(){
+	     	    	   
+	     	    	var n=$(this).index();
+	     	    	obj.splice(n,1);
+	     	     localStorage.setItem("f",JSON.stringify(obj));
+	     	     location.href="intro.html";
+	     	    })
+	     	    
+	     	    
+	     	    $("#search").click(function(){
+	     	        var sr=[];
+	     	        var m=0;
+	     	        var n=$(".inps").val();
+	     	    	 for(var i=0;i<obj.length;i++){
+	     	    	 	if(obj[i].txt.indexOf(n)!=-1){
+	     	    	 		m++;
+		     	    	 sr+="<li>"+obj[i].time+"<span>"+obj[i].txt+"</span>"+"</li>";
+		     	    	  $(".slist").html(sr);
+		     	    	}
+		     	    	if(m==0){
+		     	           $(".slist").html("没有找到相关内容");
+		     	    	}
+	     	  		}		
+	     	    	
+	     	    })
+	     	    
+ 
+   })
+			
+		</script>
+	</body>
+</html>
